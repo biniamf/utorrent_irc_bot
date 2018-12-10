@@ -386,8 +386,10 @@ loop:
 	if (!*k || *k == ']') {LeaveCriticalSection(&csec); return 0;}
 	t_tab.count++;
 	goto loop;
-	LeaveCriticalSection(&csec);
-	return 0;
+
+	// original implementation: dead code
+	// LeaveCriticalSection(&csec);
+	// return 0;
 	
 }
 
